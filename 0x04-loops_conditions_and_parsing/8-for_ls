@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script lists content of a directory
+
+
+LIST="ls -d !(*.*)"
+for i in "$LIST"
+do
+	$LIST
+done

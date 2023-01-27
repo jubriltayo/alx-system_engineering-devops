@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This scripts prints "Best School", "bad luck" and "good luck"
+
+
+while [[ $i -le 9 ]]
+do
+	if [[ $i -eq 3 ]]
+	then
+		echo "bad luck"
+	elif [[ $i -eq 7 ]]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((i++))
+done
