@@ -5,10 +5,10 @@ i=0
 while [[ $i -le 12 ]]
 do
 	j=1
-	echo "Hour :  $i"
+	echo "Hour : $i"
 	while [[ $j -le 59 ]]
 	do
-		echo "$j"
+		echo $j
 		((j++))
 	done
 	((i++))
