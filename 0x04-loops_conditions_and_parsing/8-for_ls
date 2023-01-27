@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # This script lists content of a directory
+# Only part of the name after dash is displayed
 
 
-LIST="ls -d !(*.*)"
-for i in "$LIST"
+LIST=$(ls)
+for i in $LIST
 do
-	$LIST
+	echo "$i" | cut -d '-' -f2
 done
