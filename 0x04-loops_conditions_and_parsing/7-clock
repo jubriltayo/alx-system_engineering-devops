@@ -8,7 +8,7 @@ do
 	echo "Hour :  $i"
 	while [[ $j -le 59 ]]
 	do
-		echo $j
+		echo "$j"
 		((j++))
 	done
 	((i++))
