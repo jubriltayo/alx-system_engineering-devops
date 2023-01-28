@@ -5,4 +5,4 @@
 # Show process hierarchy
 
 
-ps -u
+ps auxf
