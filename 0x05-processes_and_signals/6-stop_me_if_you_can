@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script diplays 'To infinity and beyond' indefinitely
+# Terminated by `pkill`
+
+
+pkill -f 4-to_infinity_and_beyond
