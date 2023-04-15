@@ -2,4 +2,4 @@
 # Update nginx configuration to listen to port 80 and kill nginx process afterwards
 cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo pkill nginx
+sudo pkill -o nginx
