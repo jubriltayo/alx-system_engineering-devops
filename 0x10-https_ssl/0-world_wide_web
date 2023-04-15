@@ -14,5 +14,5 @@ then
   func "$1" "web-02"
 elif [ "$#" -eq 2 ]
 then
-	func "$1" "$2"
+  func "$1" "$2"
 fi
