@@ -19,8 +19,8 @@ if __name__ == "__main__":
     tasks_user = {user_id: [{"task": task.get("title"),
                              "completed": task.get("completed"),
                              "username": username}
-                            for task in tasks if task.get("userId")
-                            == int(user_id)]
+                            for task in tasks if task.get("userId") ==
+                            int(user_id)]
                   }
 
     # Write output to json
