@@ -17,10 +17,10 @@ if __name__ == "__main__":
     """Get employee tasks"""
     tasks_ep = "{}/todos".format(url)
     tasks = requests.get(tasks_ep).json()
-    tasks_t = [d for d in tasks if d.get("userId") == int(user_id)]
-    tasks_c = [d for d in tasks_t if d.get("completed")]
+    tasks_t = [dict for dict in tasks if dict.get("userId") == int(user_id)]
+    tasks_c = [dict for dict in tasks_t if dict.get("completed")]
 
     print("Employee {} is done with tasks ({}/{}):"
           .format(name, len(tasks_c), len(tasks_t)))
     for task in tasks_c:
-        print("\t{}".format(task.get("title")))
+        print("\t {}".format(task.get("title")))
