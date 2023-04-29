@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """
-returns information
-about a TODO list
-progress using
-REST API for a
-given employee ID
+Prints employee TODO list info from REST API
 """
+
 import requests
 import sys
 
