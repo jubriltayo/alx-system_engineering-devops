@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This script prints employee TODO list information from a REST API.
-"""
+"""prints employee TODO list information from a REST API"""
 
 import requests
 import sys
@@ -20,6 +18,7 @@ if __name__ == "__main__":
     tasks_t = [dict for dict in tasks if dict.get("userId") == int(user_id)]
     tasks_c = [dict for dict in tasks_t if dict.get("completed")]
 
-    print("Employee {} is done with tasks ({}/{}):".format(name, len(tasks_c), len(tasks_t)))
+    print("Employee {} is done with tasks ({}/{}):"
+          .format(name, len(tasks_c), len(tasks_t)))
     for task in tasks_c:
         print("\t {}".format(task.get("title")))
