@@ -17,7 +17,9 @@ if __name__ == "__main__":
     # Get employee tasks
     tasks_ep = "{}/todos".format(url)
     tasks = requests.get(tasks_ep).json()
-    user_tasks = [[user_id, username, task.get("completed"), task.get("title")] for task in tasks if user_id == task.get("userId")]
+    user_tasks = [[user_id, username, task.get("completed"),
+                  task.get("title")] for task in tasks
+                  if user_id == task.get("userId")]
 
     # Save to csv
     with open("{}.csv".format(user_id), 'w', encoding='utf-8') as f:
