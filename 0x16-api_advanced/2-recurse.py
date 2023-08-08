@@ -22,7 +22,7 @@ def recurse(subreddit, hot_list=[], after=""):
         for item in body_list:
             title = item.get('data').get('title')
             hot_list.append(title)
-        if after is not None:
+        if after:
             recurse(subreddit, hot_list, after)
         return (hot_list)
     return (None)
