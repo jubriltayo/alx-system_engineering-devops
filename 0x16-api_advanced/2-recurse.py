@@ -6,12 +6,14 @@
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=None):
-    url = "https://www.reddit.com/r/{}/hot.json?after={}"\
-        .format(subreddit, after)
+def recurse(subreddit, hot_list=[], after=""):
+    url = "https://www.reddit.com/r/{}/hot.json"\
+        .format(subreddit)
     headers = {"User-Agent": "myApp/1.0"}
+    params = {"after": after}
 
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
     if response.status_code == 200:
         body = response.json()
         # query `after`
